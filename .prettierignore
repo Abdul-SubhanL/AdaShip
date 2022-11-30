@@ -1,0 +1,6 @@
+# default
+**/.git
+**/node_modules
+
+# Changelogs
+**/CHANGELOG.md

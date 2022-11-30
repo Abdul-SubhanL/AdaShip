@@ -1,0 +1,59 @@
+{
+  "root": true,
+  "env": {
+    "commonjs": true,
+    "es6": true,
+    "node": true,
+    "jest/globals": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020
+  },
+  "extends": [
+    "airbnb-base",
+    "prettier",
+    "eslint:recommended",
+    "plugin:prettier/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "plugin:markdown/recommended",
+    "plugin:json/recommended"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "plugins": ["prettier", "import", "jest", "markdown", "json", "@nrwl/nx"],
+  "rules": {
+    "no-empty-pattern": "warn",
+    "no-throw-literal": "off",
+    "no-plusplus": "off",
+    "no-warning-comments": ["warn", { "terms": ["todo", "fixme"] }],
+    "camelcase": ["error", { "allow": ["^[a-z]+(_[a-z]+)+$"] }],
+    "prettier/prettier": ["error"],
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error",
+    "prefer-promise-reject-errors": "off",
+    "no-underscore-dangle": "off",
+    "func-names": "off",
+    "import/no-extraneous-dependencies": "off",
+    "no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_",
+        "destructuredArrayIgnorePattern": "^_"
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["*.md", "*.md/*.js"],
+      "processor": "markdown/markdown"
+    }
+  ]
+}
