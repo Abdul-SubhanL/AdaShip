@@ -17,6 +17,27 @@ function boardSize() {
   return parseInt(board_size);
 }
 
+function shipsArray() {
+  // Get all ships in an array
+  let ship_array = [...ini_array].splice(1);
+
+  // Sanitise array
+  // Remove leading 'Boat: ' tag
+  // Convert commas into semicolons
+  ship_array = ship_array.map((str) =>
+    str.replace('Boat: ', '').replace(',', ':')
+  );
+
+  // Convert ships array into 2d array in the format [[ship, size of ship]]
+  ship_array = ship_array.map((str) => {
+    const [ship, size] = str.split(':');
+    return [ship, parseInt(size)];
+  });
+
+  return ship_array;
+}
+
 module.exports = {
   boardSize,
+  shipsArray,
 };
