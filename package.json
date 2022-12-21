@@ -47,5 +47,8 @@
       "prettier --write",
       "git add"
     ]
-  }  
+  },
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
 }
