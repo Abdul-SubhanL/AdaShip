@@ -4,8 +4,8 @@ function main() {
   // Output welcome screen and game options
   printMenu();
 
-  // User inputs gamemode option
-  const user_selection = userChoice();
+  // User inputs gamemode option which returns a generated settings object
+  const settings = userChoice();
 }
 
 main();
