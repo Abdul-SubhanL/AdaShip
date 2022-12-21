@@ -12,7 +12,7 @@ class Board {
     // Create 2D array with specified size as width and height
     const grid = [];
     for (let i = 0; i < this.size; i++) {
-      grid.push(new Array(this.size).fill('O'));
+      grid.push(new Array(this.size).fill('\u00B7'));
     }
     return grid;
   }
@@ -23,13 +23,13 @@ class Board {
     return this.grid[y][x];
   }
 
-  // Method to add boat to grid
-  addBoat(x, y, boat_type) {
-    // Update grid to add type of boat based on x and y coordinates
-    this.grid[x][y] = boat_type;
+  // Method to add ship to grid
+  addShip(x, y, ship_type, isVertical) {
+    // Update grid to add type of ship based on x and y coordinates
+    this.grid[x][y] = ship_type;
   }
 
-  get getGrid() {
+  getGrid() {
     // Create x axis and output at top of grid
     let x_axis = '     ';
     for (let j = 1; j <= this.size; j++) {
@@ -47,7 +47,15 @@ class Board {
         console.log(i + 1, '  ', this.grid[i].join(' '));
       }
     }
+  }
 
-    return this.grid;
+  get grid() {
+    return this._grid;
+  }
+
+  set grid(newGrid) {
+    this._grid = newGrid;
   }
 }
+
+module.exports = { Board };

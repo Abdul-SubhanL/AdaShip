@@ -101,8 +101,8 @@ function userChoice() {
       settings.hidden_mines = true;
     } else if (user_selection == 8) {
       console.log(chalk.hex('#FFA500')('\nThanks for playing! Goodbye.'));
-      process.exit(0);
       valid = true;
+      process.exit(0);
     } else {
       console.log(chalk.red('\nInvalid user_selection. Please try again. \n'));
       user_selection = prompt();
