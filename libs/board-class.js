@@ -49,6 +49,3 @@ class Board {
     return this.grid;
   }
 }
-
-let x = new Board(10);
-x.getGrid;
