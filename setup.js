@@ -40,8 +40,6 @@ function shipsArray() {
   return ship_array;
 }
 
-console.log(boardSize());
-
 module.exports = {
   boardSize,
   shipsArray,
